@@ -1,7 +1,7 @@
 #include "header.hpp"
 void Plik::plik_wyswietl() {
 	string myText;
-	ifstream MyReadFile("filename.txt");														//WYŒWIETLANIE PLIKU
+	ifstream MyReadFile("filename.txt");														//WYÅšWIETLANIE PLIKU
 
 	while (getline(MyReadFile, myText)) {
 		cout << myText << endl;
@@ -34,41 +34,6 @@ void Plik::plik_wprowadzdane() {
 	MyFile << "\n\r";
 
 	MyFile.close();
-}
-void Plik::plik_przeladuj() {
-	string fileoutt = "filename.txt";
-	string filename = "fileout.txt";
-
-	fstream Myfile;
-	fstream Outfile;
-	string Tekst = "=";
-	Myfile.open(filename, ios::in | ios::app);
-	Outfile.open(fileoutt, ios::in | ios::app);
-
-	string strReplace = Tekst;
-	string strNew = Tekst;
-	ifstream filein(filename);
-	ofstream fileout(fileoutt);
-
-
-	if (!filein || !fileout)
-	{
-		cout << "No can open files D:" << endl;
-	}
-
-	string strTemp;
-	while (filein >> strTemp)
-	{
-		if (strTemp == strReplace) {
-			strTemp = strNew;
-		}
-		strTemp += " ";
-		fileout << strTemp;
-		
-	}
-	Myfile.close();
-	Outfile.close();
-
 }
 void Plik::plik_zmien() {
 	Plik obj;
