@@ -2,9 +2,11 @@
 void Plik::plik_wyswietl() {
 	string myText;
 	ifstream MyReadFile("filename.txt");														//WYŚWIETLANIE PLIKU
-
+	int i = 1;
 	while (getline(MyReadFile, myText)) {
+		cout << i << " ";
 		cout << myText << endl;
+		i++;
 	}
 }
 void Plik::plik_wprowadzdane() {
