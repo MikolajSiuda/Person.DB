@@ -95,7 +95,7 @@ void Plik::plik_szukaj() {
 
 	while (getline(Myfile, line)) {
 		if ((offset = line.find(x, 0)) != string::npos) {
-			cout << "Znaleziono oponenta " << line << endl;
+			cout << line << endl;
 		}
 	}
 	Myfile.close();
