@@ -5,11 +5,11 @@ void Menu::menu() {
 	while (x < 6)
 	{
 		cout << "\n*******************MENU********************" << endl;
-		cout << "1.Dodawanie person" << endl;
-		cout << "2.Wyswietlanie person" << endl;
-		cout << "3.Zmiana person" << endl;
-		cout << "4.Usuwanie person" << endl;
-		cout << "5.Szukaj person" << endl;
+		cout << "1.Dodawanie osoby" << endl;
+		cout << "2.Wyswietlanie osob" << endl;
+		cout << "3.Zmiana osoby" << endl;
+		cout << "4.Usuwanie osoby" << endl;
+		cout << "5.Szukaj osoby" << endl;
 		cout << "6.Wyjscie" << endl;
 		cout << "Wybieram : ";
 		cin >> x;
