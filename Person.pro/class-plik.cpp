@@ -17,23 +17,23 @@ void Plik::plik_wprowadzdane() {
 	Person personObj;
 
 	std::string a;
-	std::cout << "Person Name:";
+	std::cout << "Imie:";
 	std::cin >> a;
 	personObj.setName(a);
 	MyFile << a <<",";
 
 	std::string b;
-	std::cout << "Person SurName:";
+	std::cout << "Nazwisko:";
 	std::cin >> b;
 	personObj.setSurName(b);
 	MyFile << b << ",";
 
 	std::string c;
-	std::cout << "Person Age:";
+	std::cout << "Wiek:";
 	std::cin >> c;
 	personObj.setAge(c);
 	MyFile << c << ",";
-	MyFile << "\n\r";
+	MyFile << "\n";
 
 	MyFile.close();
 }
@@ -44,7 +44,7 @@ void Plik::plik_zmien() {
 	int linia = 0, znajdz;
 	string line;
 
-	cout << "Linia w ktorej znajduje sie person do zmienienia: " << "\n";
+	cout << "Linia w ktorej znajduje sie osoba do zmienienia: " << "\n";
 	cin >> znajdz;
 
 	while (getline(Myfile, line)) {
@@ -70,7 +70,7 @@ void Plik::plik_usun() {
 	int x = 0;
 	ifstream Myfile(filename);
 	ofstream Delfile(filedell);
-	cout << "Linia w ktorej znajduje sie zbedny person: ";
+	cout << "Linia w ktorej znajduje sie osoba do usuniecia: ";
 	cin >> line_number;
 
 	while (getline(Myfile, line)) {
@@ -90,7 +90,7 @@ void Plik::plik_szukaj() {
 	string x = "";
 	ifstream Myfile("filename.txt");
 
-	cout << "Dane person: ";
+	cout << "Dane osoby ktora chcesz znalesc: ";
 	cin >> x;
 
 	while (getline(Myfile, line)) {
