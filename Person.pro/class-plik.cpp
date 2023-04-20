@@ -1,7 +1,7 @@
 #include "header.hpp"
-void Plik::plik_wyswietl() {
+void Plik::plik_wyswietl() {																	//WYŚWIETLANIE PLIKU
 	string myText;
-	ifstream MyReadFile("filename.txt");														//WYŚWIETLANIE PLIKU
+	ifstream MyReadFile("filename.txt");														
 	int i = 1;
 	while (getline(MyReadFile, myText)) {
 		cout << i << " ";
@@ -9,10 +9,10 @@ void Plik::plik_wyswietl() {
 		i++;
 	}
 }
-void Plik::plik_wprowadzdane() {
+void Plik::plik_wprowadzdane() {																//ZAPISYWANIE PLIKU
 
 	ofstream MyFile;
-	MyFile.open("filename.txt", std::ofstream::app);											//ZAPISYWANIE PLIKU
+	MyFile.open("filename.txt", std::ofstream::app);											
 
 	Person personObj;
 
@@ -37,7 +37,7 @@ void Plik::plik_wprowadzdane() {
 
 	MyFile.close();
 }
-void Plik::plik_zmien() {
+void Plik::plik_zmien() {																		//ZMIANA PLIKU
 	Plik obj;
 	ifstream Myfile("filename.txt");
 	ofstream Outfile("fileout.txt");
@@ -62,7 +62,7 @@ void Plik::plik_zmien() {
 	remove("filename.txt");
 	rename("fileout.txt", "filename.txt");
 }
-void Plik::plik_usun() {
+void Plik::plik_usun() {																		//USUWANIE PLIKU
 	string filename = "filename.txt";
 	string filedell = "filedel.txt";
 	string line;
@@ -84,7 +84,7 @@ void Plik::plik_usun() {
 	remove("filename.txt");
 	rename("filedel.txt", "filename.txt");
 }
-void Plik::plik_szukaj() {
+void Plik::plik_szukaj() {																		//SZUKAJ PLIKU
 	string line;
 	int offset;
 	string x = "";
